@@ -16,14 +16,16 @@ mode.addEventListener('click', () => {
 
 const emailInput = document.getElementById('Email'); 
 const passwordInput = document.getElementById('password')
+const nameInput = document.getElementById('name')
 
 emailInput.setAttribute('required', true);
 passwordInput.setAttribute('required', true);
+nameInput.setAttribute('required', true);
 
 const loginForm = document.getElementById('login_form');
 
 loginForm.addEventListener('submit', (event) => {
-    if (emailInput === '' || passwordInput === '' ){
+    if (emailInput === '' || passwordInput === '' || nameInput === ''){
      event.preventDefault(); 
     alert('Por favor, preencha todos os campos.')
     }
@@ -33,7 +35,6 @@ const login_botton = document.getElementById('login')
 
 loginForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    window.location.href='bem-vindo.html';
+    window.location.href='index.html';
 })
-
 
